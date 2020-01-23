@@ -54,14 +54,100 @@ table {
 }
 
 html, body {
-    height: 100%;
+
+	
+    // height: 100%; //by taking this off my border extended the whole length of the page
 }
 
-@main-color: purple;
+//variables here
+
+@main-color: #D8BFD8;
+
+@main-font: 'Raleway', sans-serif;
+
+@banner-color: #DCDCDC;
+
+
+//mix-ins here
+
+html{
+	font-sizing: 62.5%; //using percents makes it responsive I think
+}
+
 
 body{
   background: @main-color;
   max-width: 100%;
   margin-left: 15%;
   margin-right: 15%;
+  border: 4px solid rgb(88, 32, 141); //could make a variable for border color
+  font-family: @main-font; //using variable for font
 }
+
+.image-back{
+
+	border: 1px solid green;
+	margin-top: -5%;
+	background-color: @banner-color;
+
+	img {
+		border: 4px dotted black;
+		max-width: 30%;
+		height: auto;
+	   }//this is the closing bracket for img inside of image-back
+
+}//this is the closing bracket for image-back
+
+   header {
+	border-bottom: 1px solid black;
+	margin: 2% 1% 5% .5%;
+	padding: 2% 0;
+	display: flex;
+	justify-content: space-between;
+	
+	@media( max-width: 500px ) {
+	  flex-direction: column;
+	  align-items: center;
+	}// this closes the media query for header
+  
+	h1 {
+	  font-size: 2rem;
+  
+	  @media( max-width: 500px ) {
+		margin-bottom: 20px;
+	  }// this closes the media query for h1
+	}// this closes the h1
+	
+	nav {
+	  margin-left: -70%;
+  
+	  @media( max-width: 500px ) {
+		margin-left: 0;
+	  }// this closes the media query for the nav
+	  
+	  a {
+		font-size: 1.4rem;
+	  }// this closes the links inside of the nav  
+	  .first-anchor {
+		margin-left: 0;
+	  }// this close first-anchor 
+	}// this closes the nav
+  }// this closes the header
+
+
+  //table
+
+  table{
+	border: 1px solid black;
+
+	th{
+		border: 1px solid black;
+	}//closing tag for th
+
+	td{
+		border: 1px solid black;
+	}//closing tag for td
+
+  }//closing tag for table
+  
+

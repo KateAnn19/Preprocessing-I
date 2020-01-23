@@ -130,13 +130,68 @@ table {
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  height: 100%;
+html {
+  font-sizing: 62.5%;
 }
 body {
-  background: purple;
+  background: #D8BFD8;
   max-width: 100%;
   margin-left: 15%;
   margin-right: 15%;
+  border: 4px solid #58208d;
+  font-family: 'Raleway', sans-serif;
+}
+.image-back {
+  border: 1px solid green;
+  margin-top: -5%;
+  background-color: #DCDCDC;
+}
+.image-back img {
+  border: 4px dotted black;
+  max-width: 30%;
+  height: auto;
+}
+header {
+  border-bottom: 1px solid black;
+  margin: 2% 1% 5% 0.5%;
+  padding: 2% 0;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+header h1 {
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  header h1 {
+    margin-bottom: 20px;
+  }
+}
+header nav {
+  margin-left: -70%;
+}
+@media (max-width: 500px) {
+  header nav {
+    margin-left: 0;
+  }
+}
+header nav a {
+  font-size: 1.4rem;
+}
+header nav .first-anchor {
+  margin-left: 0;
+}
+table {
+  border: 1px solid black;
+}
+table th {
+  border: 1px solid black;
+}
+table td {
+  border: 1px solid black;
 }
