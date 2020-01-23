@@ -84,20 +84,7 @@ body{
   font-family: @main-font; //using variable for font
 }
 
-.image-back{
-
-	border: 1px solid green;
-	margin-top: -5%;
-	background-color: @banner-color;
-
-	img {
-		border: 4px dotted black;
-		max-width: 30%;
-		height: auto;
-	}//this is the closing bracket for img inside of image-back
-
-}//this is the closing bracket for image-back
-
+	
    header {
 	border-bottom: 1px solid black;
 	margin: 2% 1% 5% .5%;
@@ -127,60 +114,85 @@ body{
 	  
 	  a {
 		font-size: 1.4rem;
+		text-decoration: none;
+		color:rgb(95, 93, 93);
 	  }// this closes the links inside of the nav  
-	  .first-anchor {
-		margin-left: 0;
-	  }// this close first-anchor 
+
+	  	.first-anchor {
+			margin-left: 0;
+	  	}// this close first-anchor 
 	}// this closes the nav
-  	}// this closes the header
+}// this closes the header
 
 
   .top-content{
 	
 	display: flex;
+	padding-top: 5%;
+	background-color: @banner-color;
+
+	.image-back{
+
+	border: 1px solid green;
+	margin-top: -5%;
+	margin-right: -20%;
+	
+		img {
+			border: 4px dotted black;
+			max-width: 50%;
+			height: auto;
+		}//this is the closing bracket for img inside of image-back
+	
+	}//this is the closing bracket for image-back	
 	
 	.text-container{
-		width: 50%;
-	}
-	
-	table{
-		width: 50%;
-		border: 1px solid black;
-		margin: 5% .5% 5% .5%;
-	
-		th{
-			border: 1px solid black;
-			padding: 1%;
-		}//closing tag for th
-	
-		td{
-			border: 1px solid black;
-			padding: 1%;
-		}//closing tag for td
-	
-	  }//closing tag for table
-  	}
+		width: 80%;
+		margin-right: 15%;
+	}//this is the closing bracket for the text-container
 
+	h2{
+		font-size: 2rem;
+	}//this is the closing bracket for the h2 inside text-container
+}//this is the closing bracket for the top-content container
 
-
-  //table
 
   
   
   .middle-content{
-	  width: 100%;
-	  border: 1px solid black;
-	  margin: 5% .5% 5% .5%;
-  
-	  th{
-		  border: 1px solid black;
-		  padding: 1%;
-	  }//closing tag for th
-  
-	  td{
-		  border: 1px solid black;
-		  padding: 1%;
-	  }//closing tag for td
+	  display: flex;
+	  margin: 1%;
+
+	  .skills-table{
+
+		margin: 1%;
+		tr{
+			th{
+				border: 1px solid black;
+				padding: 1%;
+			}//closing tag for th
+		
+			td{
+				border: 1px solid black;
+				padding: 1%;
+			}//closing tag for td
+		}	
+	  }//closing bracket for skills-table  
+
+	  .education-table{
+		margin: 1%;
+		tr{
+			th{
+				border: 1px solid black;
+				padding: 1%;
+			}//closing tag for th
+		
+			td{
+				border: 1px solid black;
+				padding: 1%;
+			}//closing tag for td
+		}//closing tag for tr
+
+	  }//closing bracket for education-table  
 
   }//closing bracket for middle-contents
 

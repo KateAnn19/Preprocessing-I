@@ -141,16 +141,6 @@ body {
   border: 4px solid #58208d;
   font-family: 'Raleway', sans-serif;
 }
-.image-back {
-  border: 1px solid green;
-  margin-top: -5%;
-  background-color: #DCDCDC;
-}
-.image-back img {
-  border: 4px dotted black;
-  max-width: 30%;
-  height: auto;
-}
 header {
   border-bottom: 1px solid black;
   margin: 2% 1% 5% 0.5%;
@@ -182,39 +172,57 @@ header nav {
 }
 header nav a {
   font-size: 1.4rem;
+  text-decoration: none;
+  color: #5f5d5d;
 }
 header nav .first-anchor {
   margin-left: 0;
 }
 .top-content {
   display: flex;
+  padding-top: 5%;
+  background-color: #DCDCDC;
+}
+.top-content .image-back {
+  border: 1px solid green;
+  margin-top: -5%;
+  margin-right: -20%;
+}
+.top-content .image-back img {
+  border: 4px dotted black;
+  max-width: 50%;
+  height: auto;
 }
 .top-content .text-container {
-  width: 50%;
+  width: 80%;
+  margin-right: 15%;
 }
-.top-content table {
-  width: 50%;
-  border: 1px solid black;
-  margin: 5% 0.5% 5% 0.5%;
-}
-.top-content table th {
-  border: 1px solid black;
-  padding: 1%;
-}
-.top-content table td {
-  border: 1px solid black;
-  padding: 1%;
+.top-content h2 {
+  font-size: 2rem;
 }
 .middle-content {
-  width: 100%;
-  border: 1px solid black;
-  margin: 5% 0.5% 5% 0.5%;
+  display: flex;
+  margin: 1%;
 }
-.middle-content th {
+.middle-content .skills-table {
+  margin: 1%;
+}
+.middle-content .skills-table tr th {
   border: 1px solid black;
   padding: 1%;
 }
-.middle-content td {
+.middle-content .skills-table tr td {
+  border: 1px solid black;
+  padding: 1%;
+}
+.middle-content .education-table {
+  margin: 1%;
+}
+.middle-content .education-table tr th {
+  border: 1px solid black;
+  padding: 1%;
+}
+.middle-content .education-table tr td {
   border: 1px solid black;
   padding: 1%;
 }
