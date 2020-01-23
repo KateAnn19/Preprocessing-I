@@ -130,6 +130,7 @@ body{
 	display: flex;
 	padding-top: 5%;
 	background-color: @banner-color;
+	// justify-content: space-evenly;
 
 	.image-back{
 
@@ -196,23 +197,61 @@ body{
 
   }//closing bracket for middle-contents
 
+.bottom-content{
 
-  .work-history{
+	.work-history{
 
-	width: 100%;
-	border: 1px solid black;
-	margin: 5% .5% 5% .5%;
-
-	th{
+		width: 100%;
 		border: 1px solid black;
-		padding: 1%;
-	}//closing tag for th
+		margin: 5% .5% 5% .5%;
+	
+		th{
+			border: 1px solid black;
+			padding: 1%;
+		}//closing tag for th
+	
+		td{
+			border: 1px solid black;
+			padding: 1%;
+		}//closing tag for td
+	
+	}//closing tag for work-history
 
-	td{
-		border: 1px solid black;
-		padding: 1%;
-	}//closing tag for td
+}//closing tag for bottom content
 
 
-}//closing tag for work-history
+footer {
+	border-top: 1px solid black;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5%;
+	
+	@media( max-width: 500px ) {
+	  flex-direction: column;
+	  align-items: center;
+	}// this closes the media query for header
+	
+	nav {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	display: flex;
+	justify-items: center;
+  
+	  @media( max-width: 500px ) {
+		margin-left: 0;
+	  }// this closes the media query for the nav
+	  
+	  a {
+		font-size: 1.4rem;
+		text-decoration: none;
+		color:rgb(95, 93, 93);
+	  }// this closes the links inside of the nav  
+
+	  	.first-bottom-anchor {
+			margin-left: 0;
+	  	}// this close first-anchor 
+	}// this closes the nav
+}// this closes the header
+
+  
 

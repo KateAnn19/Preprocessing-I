@@ -226,16 +226,47 @@ header nav .first-anchor {
   border: 1px solid black;
   padding: 1%;
 }
-.work-history {
+.bottom-content .work-history {
   width: 100%;
   border: 1px solid black;
   margin: 5% 0.5% 5% 0.5%;
 }
-.work-history th {
+.bottom-content .work-history th {
   border: 1px solid black;
   padding: 1%;
 }
-.work-history td {
+.bottom-content .work-history td {
   border: 1px solid black;
   padding: 1%;
+}
+footer {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+@media (max-width: 500px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+footer nav {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-items: center;
+}
+@media (max-width: 500px) {
+  footer nav {
+    margin-left: 0;
+  }
+}
+footer nav a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #5f5d5d;
+}
+footer nav .first-bottom-anchor {
+  margin-left: 0;
 }
