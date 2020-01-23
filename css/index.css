@@ -186,12 +186,48 @@ header nav a {
 header nav .first-anchor {
   margin-left: 0;
 }
-table {
-  border: 1px solid black;
+.top-content {
+  display: flex;
 }
-table th {
-  border: 1px solid black;
+.top-content .text-container {
+  width: 50%;
 }
-table td {
+.top-content table {
+  width: 50%;
   border: 1px solid black;
+  margin: 5% 0.5% 5% 0.5%;
+}
+.top-content table th {
+  border: 1px solid black;
+  padding: 1%;
+}
+.top-content table td {
+  border: 1px solid black;
+  padding: 1%;
+}
+.middle-content {
+  width: 100%;
+  border: 1px solid black;
+  margin: 5% 0.5% 5% 0.5%;
+}
+.middle-content th {
+  border: 1px solid black;
+  padding: 1%;
+}
+.middle-content td {
+  border: 1px solid black;
+  padding: 1%;
+}
+.work-history {
+  width: 100%;
+  border: 1px solid black;
+  margin: 5% 0.5% 5% 0.5%;
+}
+.work-history th {
+  border: 1px solid black;
+  padding: 1%;
+}
+.work-history td {
+  border: 1px solid black;
+  padding: 1%;
 }
