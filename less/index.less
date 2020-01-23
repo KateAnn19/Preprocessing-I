@@ -91,19 +91,20 @@ html{
 
 
 body{
-  background: @main-color;
   max-width: 100%;
-  margin-left: 15%;
-  margin-right: 15%;
-  .bordered();//could make a variable for border color
   font-family: @main-font; //using variable for font
-
-  @media( max-width: 500px){
-	  margin-left: 0;
-	  margin-right: 0;
-  }
 }
 
+.entire-container{
+	background: @main-color;
+	margin-left: 15%;
+  	margin-right: 15%;
+	  .bordered();//could make a variable for border color
+	  @media( max-width: 500px){
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
 	
    header {
 	border-bottom: 1px solid black;
