@@ -59,6 +59,10 @@ html, body {
     // height: 100%; //by taking this off my border extended the whole length of the page
 }
 
+//need to use some mix-ins
+//center bottom navigation and give it a background
+//need to get media queries working 
+
 //variables here
 
 @main-color: #D8BFD8;
@@ -68,7 +72,18 @@ html, body {
 @banner-color: #DCDCDC;
 
 
+
+
 //mix-ins here
+
+.shadow(){
+	box-shadow: 5px 5px 5px #888;
+} 
+
+.bordered(){
+	border: 4px solid black;
+  }
+
 
 html{
 	font-sizing: 62.5%; //using percents makes it responsive I think
@@ -80,14 +95,19 @@ body{
   max-width: 100%;
   margin-left: 15%;
   margin-right: 15%;
-  border: 4px solid rgb(88, 32, 141); //could make a variable for border color
+  .bordered();//could make a variable for border color
   font-family: @main-font; //using variable for font
+
+  @media( max-width: 500px){
+	  margin-left: 0;
+	  margin-right: 0;
+  }
 }
 
 	
    header {
 	border-bottom: 1px solid black;
-	margin: 2% 1% 5% .5%;
+	margin: 2% 1% 5% 0;
 	padding: 2% 0;
 	display: flex;
 	justify-content: space-between;
@@ -98,18 +118,31 @@ body{
 	}// this closes the media query for header
   
 	h1 {
-	  font-size: 2rem;
+	  font-size: 3rem;
+	  margin-right: -10%;
+	  margin-left: 6%;
   
 	  @media( max-width: 500px ) {
-		margin-bottom: 20px;
+		margin-bottom: 3%;
+		text-align: center;
+		margin-right: -2%;
+		margin-left: 2%;
 	  }// this closes the media query for h1
 	}// this closes the h1
 	
 	nav {
-	  margin-left: -70%;
+	margin-left: 15%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 2%;
+    font-size: 1.4rem;
   
 	  @media( max-width: 500px ) {
 		margin-left: 0;
+		width: 100%;
 	  }// this closes the media query for the nav
 	  
 	  a {
@@ -126,34 +159,63 @@ body{
 
 
   .top-content{
-	
+	// border: 3px solid purple;
+	// width: 200%;
 	display: flex;
-	padding-top: 5%;
 	background-color: @banner-color;
-	// justify-content: space-evenly;
-
-	.image-back{
-
-	border: 1px solid green;
+	justify-content: space-evenly;
 	margin-top: -5%;
-	margin-right: -20%;
-	
-		img {
-			border: 4px dotted black;
-			max-width: 50%;
-			height: auto;
-		}//this is the closing bracket for img inside of image-back
-	
-	}//this is the closing bracket for image-back	
-	
-	.text-container{
-		width: 80%;
-		margin-right: 15%;
-	}//this is the closing bracket for the text-container
 
-	h2{
-		font-size: 2rem;
-	}//this is the closing bracket for the h2 inside text-container
+	@media( max-width: 500px){
+		flex-wrap: wrap;
+		// flex-direction: column;
+		justify-content: center;
+	}
+	
+	img {
+		// border: 4px dotted black;
+		max-width: 60%;
+		height: auto;
+		margin-left: 10%;
+		.shadow();
+
+		@media ( max-width: 500px){
+		max-width: 90%;	
+		margin-left: 5%;
+		}//this closes the media tag for the image
+		
+	}//this is the closing bracket for img inside of top content
+	
+	.about-container{
+		width: 100%;
+		margin-right: 5%;
+		text-align: left;
+		background: #B0E0E6;
+		.shadow();
+
+		@media ( max-width: 500px){
+			max-width: 100%;
+			margin-right: 0;
+			text-align: center;	
+			}//this closes the media tag for the about container
+
+		h2{
+			font-size: 2rem;
+			text-align: center;
+			padding-top: 4.5%;
+		}//this is the closing bracket for the h2 inside text-container
+
+		p{
+			border: 5px groove rgb(196, 188, 196);
+			width: 100%;
+			font-size: 1.25rem;
+			padding: 8%;
+			margin-top: 5%;
+			background: #B0E0E6;
+		}//this is the closing bracket for the p tag inside the text-container
+
+	}//this is the closing bracket for the about-container
+
 }//this is the closing bracket for the top-content container
 
 
@@ -161,11 +223,18 @@ body{
   
   .middle-content{
 	  display: flex;
-	  margin: 1%;
+	  margin: 5%;
 
 	  .skills-table{
-
+		text-align: center;
 		margin: 1%;
+		box-shadow: 0 0 5px #888;
+
+		@media( max-width: 500px){
+			padding: 50%;
+			margin: 8% 0 0 0;
+		}
+
 		tr{
 			th{
 				border: 1px solid black;
@@ -181,15 +250,30 @@ body{
 
 	  .education-table{
 		margin: 1%;
+		text-align: center;
+		box-shadow: 0 0 5px #888;
+
+		@media( max-width: 500px){
+			text-align: left;
+			margin: 5%;
+		}
+
 		tr{
 			th{
 				border: 1px solid black;
 				padding: 1%;
+
+				@media ( max-width: 500px){
+					padding: 1%;
+				}//closing media tag for th
 			}//closing tag for th
 		
 			td{
 				border: 1px solid black;
 				padding: 1%;
+				@media ( max-width: 500px){
+					padding: 1%;
+				}//closing media tag for th
 			}//closing tag for td
 		}//closing tag for tr
 
@@ -200,10 +284,11 @@ body{
 .bottom-content{
 
 	.work-history{
-
+		box-shadow: 0 0 5px #888;
 		width: 100%;
 		border: 1px solid black;
-		margin: 5% .5% 5% .5%;
+		margin: 5% 0 5% 0;
+		text-align: center;
 	
 		th{
 			border: 1px solid black;
@@ -217,13 +302,55 @@ body{
 	
 	}//closing tag for work-history
 
+	.more-about-container{
+		width: 100%;
+		background: #778899;
+
+		h2{
+			font-size: 2rem;
+			text-align: center;
+			padding: 1%;
+		}//closing tag for h2
+		p{
+			font-size: 1rem;
+			text-align: center;
+			padding: 1%;
+		}
+
+	}//closing tag for more-about-container
+
 }//closing tag for bottom content
+
+.the-past{
+	width: 100%;
+	background: #778899;
+
+	.past-text-container{
+
+		h2{
+			font-size: 2rem;
+			text-align: center;
+			padding: 1%;
+
+		}//closing h2 tag in past text container
+
+		p{
+			font-size: 1rem;
+			text-align: center;
+			padding: 1%;
+
+		}//closing tag for p tag in past-text-container
+
+
+	}//closing tag for past text container
+
+
+}//closing tag for the past container
+
 
 
 footer {
 	border-top: 1px solid black;
-	display: flex;
-	justify-content: space-between;
 	margin-top: 5%;
 	
 	@media( max-width: 500px ) {
@@ -234,8 +361,12 @@ footer {
 	nav {
 	margin-top: 2%;
 	margin-bottom: 2%;
-	display: flex;
-	justify-items: center;
+	width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 2%;
+    font-size: 14px;
   
 	  @media( max-width: 500px ) {
 		margin-left: 0;
@@ -251,7 +382,7 @@ footer {
 			margin-left: 0;
 	  	}// this close first-anchor 
 	}// this closes the nav
-}// this closes the header
+}// this closes the footer
 
   
 
